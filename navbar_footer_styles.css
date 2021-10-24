@@ -1,16 +1,29 @@
 /*---------------Global Styles------------------*/
 
 /*---------------header------------------*/
+html,body{
+  height: 100%;
+}
+#container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width:100%;
+  max-width:100%;
+}
 .head-nav {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     background-color: white;
   }
   
   header .logo {
-    position: relative;
+    position: absolute;
+    left: 5%;
     display: block;
-    width: 300px;
+    
+    width: 100px;
   
     /* margin-left: auto; */
     /* margin-right: auto; */
@@ -43,6 +56,7 @@
     /* margin: 0 15px; */
     font-size: 20px;
     color: inherit;
+    transition: all 0.3s ease;
     /* text-transform: uppercase; */
   }
   
@@ -66,3 +80,103 @@
   .head-nav ul li:hover {
     font-weight:bold;
   }
+
+  .container{
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  footer .footer-icons {
+    position: absolute;
+    left: 0;
+    display: block;  
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+  }
+
+  .footer-col ul{
+    list-style: none;
+  }
+
+  .footer{
+    background-color: #6622CC;   
+    padding: 1% 0 5% 0;
+    margin-top: auto;
+    min-width:100%;
+    max-width:100%;
+  }
+
+  .footer-col{
+    width: 15%;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+ }
+
+ .footer-icons h2{
+	font-size: 24px;
+	color: #ffffff;
+	margin-bottom: 15px;
+	font-weight: 600;
+	position: relative;
+}
+
+ .footer-icons h4{
+	font-size: 18px;
+	color: #ffffff;
+	margin-bottom: 15px;
+	font-weight: 300;
+	position: relative;
+}
+
+
+ .footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+  
+	font-size: 18px;
+	
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	
+	display: block;
+	transition: all 0.3s ease;
+
+}
+
+.footer-col ul li a:hover{
+	color: #ffffff;
+	font-weight:bold;
+}
+
+.footer-icons{
+  width: 15%;
+  padding-top: 0;
+  padding-right: 10%;
+  padding-bottom: 0;
+  padding-left: 5%;
+}
+
+.footer-icons .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-icons .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
