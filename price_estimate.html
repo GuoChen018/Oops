@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="uft-8">
+	<meta name="viewport"
+		  content="width=device_width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Price Estimate</title>
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="FAQstyles.css">
+</head>
+<body>
+	<section>
+		
+		<div class="container">
+			<div class="price_estimate">
+				<div class="estimate_title">
+					Get a price estimate
+				</div>
+				<div class="estimate_subtitle">
+					Choose a photographer that you'll like to work with and number of photos to get a better sense of the price!
+				</div>
+				<div class="form1">
+				<form name="form1" id="CalculateForm"><!-- <div class="form"> -->
+					<div class="form_top">
+						<div class="form_label">Photographer</div>
+						<select name='sel1' size = '1' id="photographer">
+					        <option value='0'>Kinga Cichewicz</option>
+					        <option value='1'>Brooke Cagle</option>
+					        <option value='2'>Ben Eaton</option>
+					        <option value='3'>Bousbia Kadhem</option>
+		    			</select><br>
+	    			</div>
+	    			<div class="form_bottom">
+	    				<div class="form_label">Number of Photots</div>
+	    				<input type ="text" name = "t1" id="text1"><br> 
+	    			</div>
+	    			<br>
+	    			<!-- <div class="btn">Calculate</div> -->
+					<input type ="button" name="btn1" value ="Calculate" onclick="run()">
+				</form><!-- </div> -->
+				</div>
+				<div class="estimate_result">
+					<div class="block" id="block_result">		
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+
+	<script type="text/javascript">
+		function run() {
+			unit_price = [20, 15, 25, 18];
+			photographer_index = document.getElementById("photographer").value;
+
+			pho_num = document.getElementById("text1").value;
+			price = unit_price[photographer_index] * pho_num;
+			
+			document.getElementById("block_result").innerHTML = "Price = $" + price;
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="uft-8">
+	<meta name="viewport"
+		  content="width=device_width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Hit us up</title>
+	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="FAQstyles.css">
+</head>
+<body>
+	<script type="text/javascript">
+		function validate() {
+			phone_num = document.getElementById("phone1").value;
+			valid_num = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+			with(document.hit_form) {
+				if (name.value == "") {
+					alert("Please enter your name");
+					name.focus();
+				}
+				if (email.value == "") {
+					alert("Please enter your email");
+					email.focus();
+				}
+		 		if (!phone_num.match(valid_num)) {
+		 			alert("Please enter a valid phone number");
+		 			phone.focus();
+		 		
+		 		}
+			}
+			return false;
+		}
+	</script>
+
+
+	<section>
+		<div class="container">
+			<div class="contact">
+				<div class="contact_title">
+					Hit us up
+				</div>
+				<div class="form2">
+					<form name="hit_form" onsubmit="return validate()">
+						<div class="contact_block">
+							<div class="contact_label">Name</div>
+							<input type ="text" name="name" id="name1">
+						</div>
+						<div class="contact_block">
+							<div class="contact_label">Email</div>
+							<input type ="text" name="email" id="email1">
+						</div>
+						<div class="contact_block">
+							<div class="contact_label">Phone</div>
+							<input type ="text" name="phone" id="phone1">
+						</div>
+						<div class="contact_block">
+							<div class="contact_label">Message</div>
+							<input type ="text" id="message1" style="height: 120px; cursor: ;">
+						</div>
+						<input type ="submit" name="btn2" value ="Submit">
+
+					</form>		
+				</div>
+					
+				</div>
+			</div>	
+		</div>
+	</section>
+
+
+	
+</body>
+
+</html>
