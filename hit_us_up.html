@@ -8,6 +8,7 @@
 	<title>Hit us up</title>
 	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="hit_us_up.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <body>
 	<script type="text/javascript">
@@ -17,28 +18,78 @@
 
 			with(document.hit_form) {
 				if (name.value == "") {
-					alert("Please enter your name");
+					// alert("Please enter your name");
+					$("#namewarn").show();
+					$("#name1").css("border", "#cc0000 2px solid")
 					name.focus();
 				}
 				if (email.value == "") {
-					alert("Please enter your email");
+					// alert("Please enter your email");
+					$("#emailwarn").show();
+					$("#email1").css("border", "#cc0000 2px solid")
 					email.focus();
 				}
 		 		if (!phone_num.match(valid_num)) {
-		 			alert("Please enter a valid phone number");
+		 			// alert("Please enter a valid phone number");
+					$("#phonewarn").show();
+					$("#phone1").css("border", "#cc0000 2px solid")
 		 			phone.focus();
 		 		
 		 		}
 			}
 			return false;
 		}
+
+		$(document).ready(function () {
+			$(".warn").hide();
+
+			$("#Hit").mouseenter(function expand() {
+				$("#Hit").animate({fontSize:"70px"},500)
+			})
+
+			$("#Hit").mouseleave(function expand() {
+				$("#Hit").animate({fontSize:"50px"},500)
+			})
+
+			$("#touch").hover(function expand() {
+				$("#touch").animate({fontSize:"70px"},500)
+				
+			})
+
+			$("#touch").mouseleave(function expand() {
+				$("#touch").animate({fontSize:"50px"},500)
+			})
+		})
+
+		
+
 	</script>
 
+    <div class="section1">
+        <div class="contact_title" id="touch">Get in touch</div>
+        <br>
+        <div class="grid">
+            <div class="grid_elem">
+                <img class="icon" src="image/location.png" alt="">
+                <div class="text">266 Palm Street</div>
+            </div>
+
+            <div class="grid_elem">
+                <img class="icon" src="image/email.png" alt="">
+                <div class="text">contact_us@oops.com</div>
+            </div>
+
+            <div class="grid_elem">
+                <img  class="icon" src="image/phone.png" alt="">
+                <div class="text">+1 778 827 8892</div>
+            </div>
+        </div>
+    </div>
 
 	<section>
 		<div class="container">
 			<div class="contact">
-				<div class="contact_title">
+				<div class="contact_title" id = "Hit">
 					Hit us up
 				</div>
 				<div class="form2">
@@ -47,20 +98,28 @@
 							<div class="contact_label">Name</div>
 							<input type ="text" name="name" id="name1">
 						</div>
+						<div class="warn" id="namewarn">
+							! Please enter your name
+						</div>
 						<div class="contact_block">
 							<div class="contact_label">Email</div>
 							<input type ="text" name="email" id="email1">
+						</div>
+						<div class="warn" id="emailwarn">
+							! Please enter a valid email address
 						</div>
 						<div class="contact_block">
 							<div class="contact_label">Phone</div>
 							<input type ="text" name="phone" id="phone1">
 						</div>
+						<div class="warn" id="phonewarn">
+							! Please enter a valid phone number
+						</div>
 						<div class="contact_block">
 							<div class="contact_label">Message</div>
-							<input type ="text" id="message1" style="height: 120px; cursor: ;">
+							<input type ="text" id="message1" style="height: 120px;">
 						</div>
 						<input type ="submit" name="btn2" value ="Submit">
-
 					</form>		
 				</div>
 					

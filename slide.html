@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("span").mouseenter(function(){
+				$("#portrait").animate({fontSize: "100px"},1000)
+				$("#only").animate({fontSize: "70px"},400)
+				$("#portrait").css("font-weight","900")
+				$("#only").css("color","#fff");
+				$("#oops").animate({fontSize:"40px"},500);
+				$("#oops").css("font-weight","900")
+			});
+
+			$("span").mouseleave(function(){
+				$("#portrait").css("color","#fff");
+			});
+		
+		});
+	</script>
+</head>
+
+<style type="text/css">
+
+	*{
+		font-family: "Epilogue", sans-serif;
+	}
+
+
+	#slides {
+			position: relative;
+			height: 300px;
+			padding: 0px;
+			margin: 0px;
+			list-style-type: none;
+	}
+
+	.slide {
+	    position: absolute;
+	    left: 0px;
+	    top: 0px;
+	    width: 100%;
+	    height: 100%;
+	    opacity: 0;
+	    z-index: 1;
+
+	    -webkit-transition: opacity 2s;
+	    -moz-transition: opacity 2s;
+	    -o-transition: opacity 2s;
+	    transition: opacity 2s;
+	}
+
+
+	.showing {
+	    opacity: 1;
+	    z-index: 2;
+	}
+
+	.slideshow_container{
+		display: block;
+		position: relative;
+	}
+
+	.caption{
+		  color: #000;
+		  padding: 4px 12px;
+		  position: absolute;
+		  bottom: 0%;
+		  left: 5%;
+		  width: 100%;
+		  z-index:5;
+	}
+
+	h1{
+		font-weight: 800;
+		font-size:65px;
+		line-height: 140%;
+		width: 30%;
+	}
+
+	.body1{
+		  margin-top: 5%;
+		  font-size: 24px;
+		  line-height: 160%;
+		  font-weight: 400;
+		  width: 40%;
+	}
+
+	#slides_phone{
+		display: none;
+	}
+
+	slide_phone{
+			display: none;
+	}
+
+	@media screen and (max-width: 700px){
+		#slides_phone {
+			display: block;
+		}
+
+		#slides{
+			display: none;
+		}
+
+		.slide{
+			display:none;
+		}
+
+		.slide_phone{
+			display: block;
+		}
+
+
+		.slide_phone {
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			z-index: 1;
+
+			-webkit-transition: opacity 2s;
+			-moz-transition: opacity 2s;
+			-o-transition: opacity 2s;
+			transition: opacity 2s;
+		}
+
+		#slides_phone {
+			position: relative;
+			width: 100%;
+			padding: 0px;
+			margin: 0px;
+			list-style-type: none;
+		}
+
+		.slide_phone_showing {
+			opacity: 1;
+			z-index: 2;
+		}
+
+
+		h1{
+			color: #fff;
+			font-weight: 800;
+			font-size:50px;
+			line-height: 120%;
+			width: 50%;
+			margin-left: 0;
+			padding: 0;
+			font-size: 10vw;
+		}
+
+		.body1{
+		  margin-top: 5%;
+		  font-size: 20px;
+		  line-height: 150%;
+		  font-weight: 400;
+		  width: 35%;
+		  line-height: 150%;
+		  font-size: 4vw;
+		}
+
+		.caption{
+		  color: #000;
+		  padding: 4px 12px;
+		  position: absolute;
+		  bottom: 10%;
+		  left: 5%;
+		  width: 100%;
+		}
+	}
+	
+</style>
+
+<div class="slideshow_containter">
+	<div class="slideshow">
+			<div class="caption" id="homepagetext">
+				
+				<h1 >The <span id="only">only</span> 
+				 <span id='portrait'>portrait</span> <br>you need</h1> 
+			
+				
+				<div class="body1">
+						<span id="oops">Oops!</span> is dedicated to taking great portraits for you. It's what we de best.
+				</div>
+			</div>
+
+			<ul id="slides">
+				<li class="slide showing">
+					<img src="image/slide1.jpg" style = "width: 100%" alt="">
+				</li>
+
+				<li class="slide">
+					<img src="image/slide2.jpg" style = "width: 100%" alt="">
+				</li>	
+
+				<li class="slide">
+					<img src="image/slide3.jpg" style = "width: 100%" alt="">
+				</li>
+
+				<li class="slide">
+					<img src="image/slide4.jpg" style = "width: 100%" alt="">
+				</li>	
+			</ul>	
+
+			<ul id="slides_phone">
+				<li class="slide_phone showing">
+					<img src="image/phone_slide1.jpg" style = "width: 100%" alt="">
+				</li>
+
+				<li class="slide_phone">
+					<img src="image/phone_slide2.jpg" style = "width: 100%" alt="">
+				</li>	
+
+				<li class="slide_phone">
+					<img src="image/phone_slide3.jpg" style = "width: 100%" alt="">
+				</li>
+
+				<li class="slide_phone">
+					<img src="image/phone_slide4.jpg" style = "width: 100%" alt="">
+				</li>	
+			</ul>	
+
+
+
+	</div>
+
+
+	<script type="text/javascript">
+
+	var x = window.matchMedia("(max-width: 700px)");
+
+	window.onload = slideshow_1(x);
+
+	function slideshow_1(x){
+	
+		if (x.matches) {
+			var slides = document.querySelectorAll('#slides_phone .slide_phone');
+			var currentSlide = 0;
+			var currentColor = 0;
+			var slideInterval = setInterval(nextSlidePhone,4000);
+			function nextSlidePhone(){
+			 	slides[currentSlide].className = 'slide_phone';
+			 	currentSlide = (currentSlide+1)%slides.length;
+			 	slides[currentSlide].className = 'slide_phone_showing';
+			}
+		} else {
+			var slides = document.querySelectorAll('#slides .slide');
+			var currentSlide = 0;
+			var currentColor = 0;
+			var slideInterval = setInterval(nextSlide,4000);
+			
+			function nextSlide() {
+				slides[currentSlide].className = 'slide';
+				currentSlide = (currentSlide+1)%slides.length;
+				slides[currentSlide].className = 'slide showing';
+			}
+			
+		}
+	}
+
+	
+
+	
+			
+
+
+	</script>
+	
+</div>
+
+
+<body>
+	
+</body>
+</html>
