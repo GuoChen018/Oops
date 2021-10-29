@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=, initial-scale=1.0">
+	<meta name="viewport" content="width=, initial-scale=1">
 	<title>Document</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,15 +32,21 @@
 
 	*{
 		font-family: "Epilogue", sans-serif;
+		margin: 0;
 	}
 
+	li{
+		width: 100%;
+	}
+	img{
+		width: 100%;
+	}
 
 	#slides {
 			position: relative;
-			height: 300px;
-			padding: 0px;
 			margin: 0px;
 			list-style-type: none;
+			width: 100%;
 	}
 
 	.slide {
@@ -48,9 +54,9 @@
 	    left: 0px;
 	    top: 0px;
 	    width: 100%;
-	    height: 100%;
 	    opacity: 0;
 	    z-index: 1;
+		overflow-x: hidden;
 
 	    -webkit-transition: opacity 2s;
 	    -moz-transition: opacity 2s;
@@ -75,7 +81,7 @@
 		  position: absolute;
 		  bottom: 0%;
 		  left: 5%;
-		  width: 100%;
+		  width: 77%;
 		  z-index:5;
 	}
 
