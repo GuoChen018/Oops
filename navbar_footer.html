@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>oops</title>
-        <link rel="stylesheet" href="navbar_footer_styles.css">
+        <link rel="stylesheet" href="navbarFooterNew.css">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
         <meta name="description" content="photo service home page" />
         <meta name="keywords" content="photo service website"/>
@@ -15,60 +15,72 @@
         </style>
       </head>
         <!-- ***********************  HEADER  ******************************** -->
- <div id="container">
   <header>
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("menu");
+            console.log("reached here");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
     <div class="head-nav">
         <div class="logo-nav">
           <a href="index.html">
             <img class="logo" src="img/logo.png" alt="Logo">
           </a>
         </div>
-        <div class="menu">
+        <div id="menu">
           <ul>
-              <li><a href="home.html"><span>Home</span></a></li>
-              <li><a href="About.html"><span>About us</span></a></li>
-              <li><a href="Service.html"><span>Services</span></a></li>
-              <li><a href="Works.html"><span>Works</span></a></li>
-              <li><a href="Process.html"><span>Process</span></a></li>
-              <li><a href="FAQ.html"><span>FAQ</span></a></li>
-              <li><a href="Contact.html"><span>Contact</span></a></li>
+              <li class="toggle"><a href="javascript:void(0);" class="navIcon" onclick="toggleMenu()"><i class="fas fa-bars"></i></a></li>
+              <li class="item"><a href="home.html"><span>Home</span></a></li>
+              <li class="item"><a href="About.html"><span>About us</span></a></li>
+              <li class="item"><a href="Service.html"><span>Services</span></a></li>
+              <li class="item"><a href="Works.html"><span>Works</span></a></li>
+              <li class="item"><a href="Process.html"><span>Process</span></a></li>
+              <li class="item"><a href="FAQ.html"><span>FAQ</span></a></li>
+              <li class="item"><a href="Contact.html"><span>Contact</span></a></li>
           </ul>
         </div>
     </div>
   </header>
   <body>
+<div class = "flex-wrapper">
+    <div class="content"></div>
 
-  
-    <footer class="footer">
-      <div class="container">
-        <div class="row">
-          <div class="footer-icons">
-            <h2>Oops!</h2>
-            <h4>Your Professional portrait photographers at your fingertips</h4>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="footer-col">
-            <ul>
-              <li><a href="home.html"><span>Home!</span></a></li>
-              <li><a href="About.html"><span>About!</span></a></li>
-              <li><a href="Service.html"><span>Process!</span></a></li>
-              <li><a href="Gallery.html"><span>Services!</span></a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <ul>
-              <li><a href="Works.html"><span>Works!</span></a></li>
-              <li><a href="FAQ.html"><span>FAQ?</span></a></li>
-              <li><a href="Contact.html"><span>Contact!</span></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-   </footer>
-  
-</body>
+            <footer class="footer">
+                <div class="row">
+                    <div class="footer-icons">
+                        <h2>Oops!</h2>
+                        <h4>Your Professional portrait photographers <br> at your fingertips</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <ul>
+                            <li><a href="home.html"><span>Home!</span></a></li>
+                            <li><a href="About.html"><span>About!</span></a></li>
+                            <li><a href="Service.html"><span>Process!</span></a></li>
+                            <li><a href="Gallery.html"><span>Services!</span></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <ul>
+                            <li><a href="Works.html"><span>Works!</span></a></li>
+                            <li><a href="FAQ.html"><span>FAQ?</span></a></li>
+                            <li><a href="Contact.html"><span>Contact!</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+
 </div>
+
+
+</body>
 </html>
