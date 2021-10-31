@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    * {
+        outline: solid 1px rgba(255, 0, 0, 0.61); 
+        box-sizing: border-box; 
+    }
+
+    body {
+        background-color: #FDDF56;
+        margin: 0;
+    }
+
+    .head , .row{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px 40px; 
+        width: 100%;
+    }
+
+    .column {
+        float: left;
+        width: 33.33%;
+        padding-right: 20px;
+    }
+
+    .row {
+        margin-bottom: 40px;
+    }
+
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .head p {
+        width: 70%;
+    }
+
+    h2 {
+        color: #6622CC;
+    }
+
+    .team {
+        padding: 100px 40px;
+        background-color: #6622CC;
+        margin: 100px auto 100px auto;
+        width: 100%;
+        border-radius: 60px;
+    }
+
+    .teamImg {
+        width: 100%;
+    }
+
+    .teamHeader {
+        color: #fff;
+    }
+
+    .teamInfo {
+        color: #fff;
+    }
+
+    .testimonialCol {
+        float: left;
+        width: 50%;
+        padding-right: 40px;
+    }
+
+    .testimonial {
+        background-color: #6622CC;
+        color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+    }
+
+
+    .timeline {
+        position: relative;
+        max-width: 1200px; 
+        margin: 40px auto;
+    }
+
+    .timeline::after {
+        content: "";
+        position: absolute;
+        width: 6px;
+        background-color: #6622CC;
+        top: 0;
+        left: 0; 
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+        border-radius: 50px;
+    }
+
+    .container {
+        padding: 10px 40px; 
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+        color: #fff;
+    }
+    
+    .container::after {
+        content: "";
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: #fff;
+        z-index: 1;
+        border: 4px solid #6622CC;
+        top: 15px;
+        border-radius: 50%;
+    }
+
+    .left {
+        left: 0;
+    }
+
+    .right {
+        left: 50%;
+    }
+
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid #fff;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #6622CC;;
+
+    }
+    
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #6622CC transparent transparent;
+    }
+
+        
+    .right::after {
+        left: -16px;
+    }
+
+    .content {
+        padding: 20px 30px;
+        position: relative;
+        background-color: #6622CC;
+        border-radius: 8px;
+    }
+
+    .hero-btn {
+        display: inline-block;
+        font-weight: 600;
+        text-decoration: none;
+        color: #121212;
+        padding: 12px 30px;
+        font-size: 18px;
+        background-color: #FDDF56;
+        position: relative;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.5s;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+        .timeline::after {
+            left: 31px;
+        }
+
+        .head p {
+            width: 80%;
+        }
+        .container {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+        .container::before {
+            left: 60px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #6622CC transparent transparent;
+        }
+
+        .left::after, .right::after {
+            left: 15px;
+        }
+
+        .right {
+            left: 0%;
+        }
+        
+        .row {
+            margin-bottom: 0px
+        }
+
+        .column{
+            width: 100%;
+            padding-right: 0;
+            padding-bottom: 40px;
+        }
+        
+        .testimonialCol {
+            width: 100%;
+            padding-right: 0;
+            padding-bottom: 40px;
+        }
+    }
+    
+
+</style>
+<body>
+    <div id="container">
+        <header>
+          <div class="head-nav">
+              <div class="logo-nav">
+                <a href="slide.html">
+                  <img class="logo" src="images/Oops!.png" alt="Logo">
+                </a>
+              </div>
+              <div class="menu">
+                <ul>
+                    <li><a href="slide.html"><span>Home!</span></a></li>
+                    <li><a href="About.html"><span>About!</span></a></li>
+                    <li><a href="service.html"><span>Services!</span></a></li>
+                    <li><a href="gallery.html"><span>Gallery!</span></a></li>
+                    <li><a href="process.html"><span>Process!</span></a></li>
+                    <li><a href="FAQ.html"><span>FAQ!</span></a></li>
+                    <li><a href="contact.html"><span>Contact!</span></a></li>
+                </ul>
+              </div>
+          </div>
+        </header>
+    <div class="head">
+        <h2>A bit about us</h2>
+        <p class="body2">
+            Oops! was created by accident, as the name suggest. <br><br>
+
+            All jokes aside, we’re a team of passionate and professional photographers who specialize in portraits. <br><br>
+
+            Check out our sick timeline below to learn more us:
+        </p>
+    </div>
+    <div class="timeline">
+        <div class="container left">
+            <div class="content">
+                <h4>2017</h4>
+                <p class="body3">
+                    The founders were unsatisfied with how their portraits looked, so they decided to do it themselves.  
+                    Some not-so-nice friends joked that it wasn't because of the "poor" photography skills. Anyways, Oops was created.
+                </p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h4>2018</h4>
+                <p class="body3">
+                    The two founders were doing a decent job and working with multiple local clients in Boston.
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h4>2019</h4>
+                <p class="body3">
+                    The founders decided to hire photographers to alleviate the work. This was when the Oops process began! 
+                </p>
+            </div>
+        </div>
+        <div class="container right">
+            <div class="content">
+                <h4>2020</h4>
+                <p class="body3">
+                    At this point, Oops has worked with over 200+ clients to shoot the best portraits possible. 
+                </p>
+            </div>
+        </div>
+        <div class="container left">
+            <div class="content">
+                <h4>2021</h4>
+                <p class="body3">
+                    Oops is growing! In the future, we're planning to hire more photographers and other roles to grow the business! 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="team">
+        <div class="head">
+            <h2 class="teamHeader">Meet the Team</h2>
+            <p class="body2"><span style="color: #fff;">Seriously, we don't bite!</span></p>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <img class="teamImg" src="images/team1.png" alt="">
+                <div class="teamInfo">
+                    <p class="bodyItalic">Founder/CEO</p>
+                    <h3>Jacob Nelson</h3>
+                    <p class="body3">City person / Lover of cats / YouTube vlogger / Casey Neistat fan </p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="teamImg" src="images/team2.png" alt="">
+                <div class="teamInfo">
+                    <p class="bodyItalic">Founder/CEO</p>
+                    <h3>Ryan Holiday</h3>
+                    <p class="body3">Bay area native / Dogs > cats / Beach guy / Mario Kart expert</p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="teamImg" src="images/team3.png" alt="">
+                <div class="teamInfo">
+                    <p class="bodyItalic">Sales Director</p>
+                    <h3>Naomi Smith</h3>
+                    <p class="body3">Cafe Hobbyist / Ex-competitive snowboarder / Notion enthusiast</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img class="teamImg" src="images/team4.png" alt="">
+                <div class="teamInfo">
+                    <p class="bodyItalic">Marketing Director</p>
+                    <h3>Jennifer Rivera</h3>
+                    <p class="body3">Avid Traveler / D1 Swimmer / Lady M cake #1 / Home Decor</p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="teamImg" src="images/team5.png" alt="">
+                <div class="teamInfo">
+                    <p class="bodyItalic">Production Manager</p>
+                    <h3>Nicholas Perry</h3>
+                    <p class="body3">Magician / Lover of Sci-fi / Fortnite gamer / Tech enthusiast</p>
+                </div>
+            </div>
+            <div class="column">
+                <img class="teamImg" src="images/team6.png" alt="">
+                <div class="teamInfo">
+                    <p class="bodyItalic">Production Manager</p>
+                    <h3>Nancy Brown</h3>
+                    <p class="body3">Twitch streamer / INFP-A / Norwegian Wood / Passionate Hiker </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="head">
+        <h2>Words on the street</h2>
+        <p class="body2">We love working with people, and we deliver quality. 
+        See what our friends have said. These really warm our hearts. </span></p>
+    </div>
+
+    <div class="row">
+        <div class="testimonialCol">
+            <div class="testimonial">
+                <h4>I had an amazing experience working with Oops! They're true professionals!</h4>
+                <p class="body3">Lisa Ninmo, Her Vitals</p>
+            </div>
+        </div>
+        <div class="testimonialCol">
+            <div class="testimonial">
+                <h4>Oops took the time to understand my needs, and the results are phenominal!</h4>
+                <p class="body3">Niah Taylor, Marketing Impact</p>
+            </div>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="testimonialCol">
+            <div class="testimonial">
+                <h4>Great team. Quality portraits. Fun interactions!</h4>
+                <p class="body3">Simon Fraser, Huski</p>
+            </div>
+        </div>
+        <div class="testimonialCol">
+            <div class="testimonial">
+                <h4>Loved every single portraits from Oops! Can't wait to show them to my friends!</h4>
+                <p class="body3">Jorda Rondel, The Baker</p>
+            </div>
+        </div>
+    </div>
+    <div class="cta">
+        <h2 class="ctaHeader"><span style="color:#FDDF56">Oops! </span> I will like a portrait!</h2>
+        <a href="" class="hero-btn">Let's make it happen!</a>
+    </div>
+    <footer class="footer">
+        <div class="ff">
+          <div class="row">
+            <div class="footer-icons">
+              <h2>Oops!</h2>
+              <h4>Your Professional portrait photographers at your fingertips</h4>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+            <div class="footer-col">
+              <ul>
+                <li><a href="slide.html"><span>Home!</span></a></li>
+                <li><a href="about.html"><span>About!</span></a></li>
+                <li><a href="service.html"><span>Services!</span></a></li>
+                <li><a href="gallery.html"><span>Gallery!</span></a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <ul>
+                <li><a href="process.html"><span>Process!</span></a></li>
+                <li><a href="FAQ.html"><span>FAQ?</span></a></li>
+                <li><a href="hit_us_up.html"><span>Contact!</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+     </footer>
+</body>
+</html>

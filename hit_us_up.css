@@ -1,0 +1,161 @@
+*,
+*::before
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html{
+	font-family: "Epilogue", sans-serif;
+	/* previous font-family: 'Roboto', sans-serif;*/
+	font-size: 10px;
+	box-sizing: border-box;
+	background-color: #fddf56;/*previous: #3c4053;*/
+}
+
+section{
+	width: 100%;
+	/*height: 200vh;  vh = viewport height */
+	display: flex; /*for positioning child elements and the main container in mobile devices*/
+	align-items: center;
+	justify-content: center;
+}
+
+
+.container{
+	width: 100%;
+	max-width: 110rem; /*previous: 80rem*/
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
+
+
+input[type="text"] {
+    border: 2px solid #fff;
+  padding: 10px 5px;
+  outline: none;
+  border-radius: 5px;
+  width: 92%;
+  font-size: 18px;
+  
+}
+
+
+.contact{
+	padding: 5rem 0;
+}
+
+.form2 {
+	padding: 3rem 1.5rem 3rem 1.5rem;
+	background-color: #6622CC;
+	padding-bottom: 40px;
+	border-radius: 5px;
+	margin-top: 5%;
+}
+
+
+.contact_title {
+	color: #6622CC;
+	font-size: 50px;
+	font-weight: bold;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	line-height: 34px;
+	text-align: center;
+	width: 40%;
+	margin-left: 30%;
+	margin-left: 30%;
+}
+
+.contact_block {
+	width: 100%;
+  	padding: .5rem 3rem;
+  
+}
+
+.contact_label {
+  font-size: 25px;
+  font-weight: bold;
+  color:#fff;
+  padding: 1.5rem 1rem .5rem 0rem;
+}
+
+input[name="btn2"] {
+	border: 2px solid #fddf56;
+   
+  margin: 40px 0px 10px 30px;
+  background: #fddf56;
+  width: 100px;/*150px;*/
+  padding: .8rem 0rem;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #6622CC;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    margin: 5% 11%;
+    column-gap: 3%;
+
+}
+
+.grid_elem{
+    color: #fff;
+    font-size: 18px;
+    background-color: #6622CC;
+    padding: 7%;
+    border-radius: 5px;
+}
+
+.warn{
+	position: absolute;
+	color:#fddf56;
+	font-weight: 900;
+	font-size: 17px;
+	right:18%;
+}
+
+@media screen and (max-width: 700px){
+	.grid{
+		display: grid;
+		grid-template-columns:repeat(1,1fr);
+		margin: 5% 11%;
+		row-gap: 5%;
+		width: 60%;
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+	
+	.grid_elem{
+		padding:2% 5%
+	}
+
+	.contact_title{
+		font-size: 33px;
+	}
+
+	.form2{
+		margin: 2% 10%;
+		padding: 3%;
+	}
+
+	input[type="text"] {
+	  border: 2px solid #fff;
+	  padding: 5px;
+	  outline: none;
+	  border-radius: 5px;
+	  width: 70%;
+	  font-size: 13px;
+	  
+	}
+
+	.warn{
+		font-size: 13px;
+	}
+}

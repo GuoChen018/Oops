@@ -257,6 +257,13 @@ html, body {
   font-weight:bold;
 }
 
-}
 
 /* mobile footer */
+.footer-col{
+  display: none !important;
+}
+
+}
+
+
+
