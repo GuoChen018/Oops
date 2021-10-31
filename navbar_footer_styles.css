@@ -4,12 +4,35 @@
 
 /* desktop version navbar */
 
-/* *{
-  border:red 1px solid;
-} */
+*{
+  /* border:red 1px solid; */
+  margin:0;
+}
+
+
 
 body{
   margin:0;
+}
+
+
+.fa:hover {opacity: 0.7;}
+.fa-facebook {background: #3B5998;color: white;}
+.fa-instagram {background: #125688;color: white;}
+       
+header{
+  background-color: #fddf56;
+  border-bottom: #6622CC 4px solid;
+}
+
+ul li {
+  background-color:inherit;
+}
+
+header{
+  width: 100%;
+  display: block;
+  position: fixed;
 }
 
 h4{
@@ -44,7 +67,6 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    background-color: white;
   }
   .logo-nav {
       margin-right: auto;
