@@ -5,6 +5,16 @@
 	padding: 0;
 	box-sizing: inherit;
 }
+*{
+	font-family: "Epilogue", sans-serif;
+	text-decoration: none;
+}
+
+a{
+	text-decoration: none;
+	color:#000;
+}
+
 
 html{
 	font-family: "Epilogue", sans-serif;
@@ -106,11 +116,13 @@ input[name="btn2"] {
 }
 
 .grid_elem{
-    color: #fff;
+    color: #000;
+	font-weight: 600;
     font-size: 18px;
-    background-color: #6622CC;
+    /* background-color: #6622CC; */
     padding: 7%;
     border-radius: 5px;
+	border: 10px solid #6622CC ;
 }
 
 .warn{

@@ -33,6 +33,7 @@ header{
   width: 100%;
   display: block;
   position: fixed;
+  top: 0;
 }
 
 h4{
@@ -161,6 +162,7 @@ html, body {
     margin-top: auto;
     min-width:100%;
     max-width:100%;
+    padding-top: 5%;
   }
 
   .footer-col{
@@ -204,6 +206,8 @@ html, body {
 
 }
 
+
+
 .footer-col ul li a:hover{
     color: #ffffff;
     font-weight:bold;
@@ -236,11 +240,13 @@ html, body {
 
 @media (max-width: 800px) {
 
+
   header{
+    display: block;
+    position:relative;
     background-color: #6622CC;
     border-bottom: none;
     margin:none;
-
   }
 
 *{

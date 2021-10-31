@@ -1,3 +1,89 @@
+
+body{
+    background-color:#fddf56;
+    font-family: "Epilogue", sans-serif;
+    /* border:red solid 1px; */
+}
+
+body{
+    margin: 0;
+    display: block;
+    position: relative;
+}
+
+header{
+    z-index: 2;
+    margin-top: 0px;
+}
+
+/* style for cta */
+.cta {
+    box-sizing: border-box;
+    margin: 100px auto 0px auto;
+    width: 100%;
+    background-color: #121212;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 40px;
+  }
+  
+.ctaHeader {
+    color: #fff;
+}
+
+#oopscta{
+    color:#FDDF56;
+}
+
+h2{
+    background-color: inherit;
+}
+
+span{
+    background-color: inherit;
+}
+div{
+    background-color: inherit;
+}
+
+a{
+    background-color: inherit;
+}
+
+.hero-btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    color: #121212;
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #FDDF56;
+    position: relative;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 40px;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 130%;
+    /* Changes */
+    margin: 0;
+  }
+
+h1{
+    font-size: 60px;
+    text-align: center;
+    color:rgb(111, 27, 212);
+    font-weight: 800;
+    margin-top: 10%;
+    width: 60%;
+    margin-left: 20%;
+}
+
 .gallery{
     margin: 7%;
     display: grid;
@@ -6,7 +92,7 @@
     column-gap:0.5%;
     grid-row-gap: 0.2%;
     /* background-color:#FFF9ED; */
-    background-color:#F5CD6E;
+    background-color:#fddf56;
 }
 
 #img17{
@@ -162,10 +248,6 @@
 }
 
 
-body{
-    /* background-color:#FFF9ED; */
-    background-color:#F5CD6E;
-}
 
 img{
     width: 100%;
@@ -180,7 +262,36 @@ img{
 
 
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
+
+    .head-nav{
+		background-color: #6622CC;
+	}
+	
+	ul li{
+		background-color: #6622CC;
+	}
+
+	#menu{
+		background-color: #6622CC;
+	}
+
+    .footer-icons{
+        background-color: #6622CC;
+    }
+
+    .cta{
+        margin-top: 110%;
+    }
+
+   h2{
+    font-size: 40px;
+   }
+
+    h1{
+        font-size: 50px;
+    }
+
     .gallery{
         margin: 7%;
         display: grid;
@@ -188,8 +299,6 @@ img{
         grid-template-rows: repeat(100, 6vw);
         column-gap: 2%;
         grid-row-gap: 0.2%;
-        /* background-color:#FFF9ED; */
-        background-color:#F5CD6E;
     }
 
 
@@ -392,8 +501,8 @@ img{
 .rig-text {
     display: block;
      position: absolute;
-    bottom: 5px ;
-    left:5px;
+    bottom: 10px ;
+    left:10px;
     max-width: 70%;
     color: #fff;
     line-height: 1.5em;

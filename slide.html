@@ -7,6 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="navbar_footer_styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
 	<script type="text/javascript">
@@ -32,17 +33,19 @@
 
 	*{
 		font-family: "Epilogue", sans-serif;
-		margin: 0;
 	}
-
-	li{
-		width: 100%;
+	header{
+		display: block;
+		position: relative;
+		width: 103%;
 	}
+	
 	img{
 		width: 100%;
 	}
 
 	#slides {
+			display: block;
 			position: relative;
 			margin: 0px;
 			list-style-type: none;
@@ -79,10 +82,10 @@
 		  color: #000;
 		  padding: 4px 12px;
 		  position: absolute;
-		  bottom: 0%;
+		  bottom: 20%;
 		  left: 5%;
 		  width: 77%;
-		  z-index:5;
+		  z-index:3;
 	}
 
 	h1{
@@ -108,9 +111,19 @@
 			display: none;
 	}
 
-	@media screen and (max-width: 700px){
+	@media screen and (max-width: 800px){
+		header{
+			width:100%;
+			margin-bottom: 0;
+			background-color: #6634a5;
+		}
+		.head-nav{
+			margin-bottom: 0;
+		}
+
 		#slides_phone {
 			display: block;
+			width: 110%;
 		}
 
 		#slides{
@@ -154,39 +167,81 @@
 			z-index: 2;
 		}
 
+		
 
 		h1{
 			color: #fff;
 			font-weight: 800;
-			font-size:50px;
 			line-height: 120%;
 			width: 50%;
 			margin-left: 0;
 			padding: 0;
+			font-size: 7vw;
+		}
+
+		#portrait{
 			font-size: 10vw;
 		}
 
 		.body1{
 		  margin-top: 5%;
-		  font-size: 20px;
+		  font-size: 15px;
 		  line-height: 150%;
 		  font-weight: 400;
 		  width: 35%;
 		  line-height: 150%;
-		  font-size: 4vw;
+		  font-size: 3vw;
 		}
 
 		.caption{
 		  color: #000;
 		  padding: 4px 12px;
 		  position: absolute;
-		  bottom: 10%;
+		  bottom: 1%;
 		  left: 5%;
-		  width: 100%;
+		  width: 70%;
 		}
+	}
+
+	header{
+		z-index: 3;
 	}
 	
 </style>
+
+<header>
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("menu");
+            console.log("reached here");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+    <div class="head-nav">
+        <div class="logo-nav">
+          <a href="slide.html" class="logo">
+            Oops!
+          </a>
+        </div>
+        <div id="menu">
+          <ul>
+              <li class="toggle"><a href="javascript:void(0);" class="navIcon" onclick="toggleMenu()"><i class="fas fa-bars"></i></a></li>
+              <li class="item"><a href="slide.html"><span>Home</span></a></li>
+              <li class="item"><a href="about.html"><span>About us</span></a></li>
+              <li class="item"><a href="service.html"><span>Services</span></a></li>
+              <li class="item"><a href="gallery.html"><span>Works</span></a></li>
+              <li class="item"><a href="process.html"><span>Process</span></a></li>
+              <li class="item"><a href="FAQ.html"><span>FAQ</span></a></li>
+              <li class="item"><a href="hit_us_up.html"><span>Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </header>
 
 <div class="slideshow_containter">
 	<div class="slideshow">
@@ -221,19 +276,19 @@
 
 			<ul id="slides_phone">
 				<li class="slide_phone showing">
-					<img src="image/phone_slide1.jpg" style = "width: 100%" alt="">
+					<img src="image/phoneslide1.jpg" style = "width: 100%" alt="">
 				</li>
 
 				<li class="slide_phone">
-					<img src="image/phone_slide2.jpg" style = "width: 100%" alt="">
+					<img src="image/phoneslide2.jpg" style = "width: 100%" alt="">
 				</li>	
 
 				<li class="slide_phone">
-					<img src="image/phone_slide3.jpg" style = "width: 100%" alt="">
+					<img src="image/phoneslide3.jpg" style = "width: 100%" alt="">
 				</li>
 
 				<li class="slide_phone">
-					<img src="image/phone_slide4.jpg" style = "width: 100%" alt="">
+					<img src="image/phoneslide4.jpg" style = "width: 100%" alt="">
 				</li>	
 			</ul>	
 
@@ -286,7 +341,7 @@
 </div>
 
 
-<body>
-	
+<body>	
 </body>
+
 </html>

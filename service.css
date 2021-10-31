@@ -7,18 +7,69 @@ div{
 	background-color: inherit;
 }
 
+body{
+	margin: 0;
+}
 *{
 	box-sizing: border-box;
-	background-color: #fddf56;
 	/* background-color: inherit; */
+}
+
+body{
+	background-color: #fddf56;
 }
 
 h3, h2{
 	background-color: inherit;
 }
+
 h3{
 	font-size: 28px;
 }
+/* cta stylesheet */
+.cta {
+    box-sizing: border-box;
+    margin: 100px auto 0px auto;
+    width: 100%;
+    background-color: #121212;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 40px;
+  }
+
+h2{
+	font-size: 48px;
+}
+  
+.ctaHeader {
+    color: #fff;
+}
+
+#oopscta{
+    color:#FDDF56;
+}
+
+.hero-btn {
+    display: inline-block;
+    font-weight: 600;
+    text-decoration: none;
+    color: #121212;
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #fddf56;
+    position: relative;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: 40px;
+}
+
+
+span{
+    background-color: inherit;
+}
+
 .service_intro{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -147,6 +198,7 @@ h3{
 .price_pic{
 	border-radius: 7%;
 }
+
 h4{
 	font-size: 1.5vw;
 	font-weight: 700;
@@ -428,6 +480,15 @@ input[type="button"]:hover {
 
 	.form_bottom{
 		padding: 2%;
+	}
+
+
+	.cta{
+        margin-top: 110%;
+    }
+
+	h2{
+		font-size: 40px;
 	}
 
 }

@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="service.css">
+	<link rel="stylesheet" href="navbar_footer_styles.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +17,10 @@
 	font-family: "Epilogue", sans-serif;
 }
 
-
+.footer-icons{
+	width: 30%;
+	text-align: left;
+}
 
 </style>
 
@@ -31,6 +35,41 @@
 			
 
 </script>
+
+<header>
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("menu");
+            console.log("reached here");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+    <div class="head-nav">
+        <div class="logo-nav">
+          <a href="slide.html" class="logo">
+            Oops!
+          </a>
+        </div>
+        <div id="menu">
+          <ul>
+              <li class="toggle"><a href="javascript:void(0);" class="navIcon" onclick="toggleMenu()"><i class="fas fa-bars"></i></a></li>
+              <li class="item"><a href="slide.html"><span>Home</span></a></li>
+              <li class="item"><a href="about.html"><span>About us</span></a></li>
+              <li class="item"><a href="service.html"><span>Services</span></a></li>
+              <li class="item"><a href="gallery.html"><span>Works</span></a></li>
+              <li class="item"><a href="process.html"><span>Process</span></a></li>
+              <li class="item"><a href="FAQ.html"><span>FAQ</span></a></li>
+              <li class="item"><a href="hit_us_up.html"><span>Contact</span></a></li>
+          </ul>
+        </div>
+    </div>
+  </header>
+
 
 <body>
 
@@ -381,6 +420,12 @@
 			pho_num = document.getElementById("text1").value;
 			price = unit_price[photographer_index] * pho_num;
 
+			if (pho_num >=5) {
+				price = parseInt(price);
+				price = 0.9*price;
+				price = price.toFixed(2);
+			}
+
 			if (price == 0) {
 				document.getElementById("block_result").innerHTML = "！Please enter the number of photos you need.";
 			} else {
@@ -392,5 +437,42 @@
 
 		
 	</script>
+
+	<div class="cta">
+		<h2 class="ctaHeader"><span id="oopscta" style="color:#FDDF56">Oops! </span> I will like a portrait!</h2>
+		<a href="hit_us_up.html" class="hero-btn">Let's make it happen!</a>
+	</div>
 </body>
+
+<footer class="footer">
+	<div class="row">
+
+		<div class="footer-icons">
+			<h2>Oops!</h2>
+			<h4 style="text-align: left;">Your Professional portrait photographers <br> At your fingertips</h4>
+			<br>
+			<div class="social-links">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+
+		<div class="footer-col">
+			<ul>
+				<li><a href="slide.html"><span>Home!</span></a></li>
+				<li><a href="about.html"><span>About!</span></a></li>
+				<li><a href="process.html"><span>Process!</span></a></li>
+				<li><a href="service.html"><span>Services!</span></a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<ul>
+				<li><a href="gallery.html"><span>Works!</span></a></li>
+				<li><a href="FAQ.html"><span>FAQ?</span></a></li>
+				<li><a href="hit_us_up.html"><span>Contact!</span></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
 </html>
