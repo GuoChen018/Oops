@@ -3,11 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="title" content="Oops homepage">
+	<meta name="description" content="Portrait Photography Service ">
+	<meta name="keywords" content="Portrait, Photography, Picture, Photo">
+	<meta name="author" content="Winnie Wang, Guo Chen, Weishi Ding, Vivian Li">
+
 	<title>Document</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="navbar_footer_styles.css">
+	<link rel="stylesheet" href="navbarslide.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
 	<script type="text/javascript">
@@ -16,7 +22,7 @@
 		if($(window).width() < 800){
 			$(document).ready(function(){
 					$("span").mouseenter(function(){
-						$("#portrait").animate({fontSize: "75px"},1000)
+						$("#portrait").animate({fontSize: "80px"},1000)
 						$("#only").animate({fontSize: "55px"},400)
 						$("#portrait").css("font-weight","900")
 						$("#only").css("color","#fff");
@@ -59,17 +65,18 @@
 	*{
 		font-family: "Epilogue", sans-serif;
 	}
+
 	header{
 		display: block;
 		position: relative;
-		width: 102.5%;
-		background-color:#6634a5;
+		width: 102.8%;
+		background-color: #6622CC;
 		z-index: 3;
 		/* border:none; */
 	}
 	
 	img{
-		width: 100%;
+		max-width: 100%;
 	}
 
 	.item{
@@ -92,7 +99,7 @@
 	    position: absolute;
 	    left: 0px;
 	    top: 0px;
-	    width: 100%;
+	    max-width: 100%;
 	    opacity: 0;
 	    z-index: 1;
 		overflow-x: hidden;
@@ -118,7 +125,7 @@
 		  color: #000;
 		  padding: 4px 12px;
 		  position: absolute;
-		  bottom: 20%;
+		  bottom: 12%;
 		  left: 5%;
 		  width: 77%;
 		  z-index:3;
@@ -147,6 +154,16 @@
 		display: none;
 	}
 
+	.footer{
+		display: block;
+		margin-top: 20%;
+		/* position: absolute; */
+		/* bottom: -54%; */
+		margin-top: 57.7%;
+		z-index: 7;
+		max-width: 102.75%;
+	}
+
 	@media screen and (max-width: 900px){
 		
 		.slide_phone{
@@ -169,16 +186,13 @@
 		header{
 			width:100%;
 			margin-bottom: 0;
-			background-color: #6634a5;
+			background-color: #6622CC;
 		}
 
 		.head-nav{
 			margin-bottom: 0;
 		}
 
-		
-
-	
 		.slide_phone {
 			position: absolute;
 			left: 0px;
@@ -207,7 +221,6 @@
 			z-index: 2;
 		}
 
-		
 
 		h1{
 			color: #fff;
@@ -221,6 +234,10 @@
 
 		#portrait{
 			font-size: 10vw;
+		}
+
+		.footer{
+			margin-top: 0%;
 		}
 
 		.body1{
@@ -281,7 +298,7 @@
           </ul>
         </div>
     </div>
-  </header>
+</header>
 
 <div class="slideshow_containter">
 	<div class="slideshow">
@@ -316,19 +333,19 @@
 
 			<ul id="slides_phone">
 				<li class="slide_phone showing">
-					<img src="image/phoneslide1.jpg" style = "width: 100%" alt="">
+					<img src="image/phoneslide1.jpg" alt=" " style = "width: 100%" alt="">
 				</li>
 
 				<li class="slide_phone">
-					<img src="image/phoneslide2.jpg" style = "width: 100%" alt="">
+					<img src="image/phoneslide2.jpg" alt=" "style = "width: 100%" alt="">
 				</li>	
 
 				<li class="slide_phone">
-					<img src="image/phoneslide3.jpg" style = "width: 100%" alt="">
+					<img src="image/phoneslide3.jpg" alt=" "style = "width: 100%" alt="">
 				</li>
 
 				<li class="slide_phone">
-					<img src="image/phoneslide4.jpg" style = "width: 100%" alt="">
+					<img src="image/phoneslide4.jpg"alt=" " style = "width: 100%" alt="">
 				</li>	
 			</ul>	
 
@@ -369,21 +386,36 @@
 			
 		}
 	}
-
-	
-
-	
-			
-
-
 	</script>
 	
 </div>
 
-
-<body>	
-</body>
-
-
+<footer class="footer">
+	<div class="row">
+		<div class="footer-icons">
+			<h2>Oops!</h2>
+			<h4>Your Professional portrait photographers <br> at your fingertips</h4>
+			<div class="social-links">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+		<div class="footer-col">
+			<ul>
+				<li><a href="home.html"><span>Home!</span></a></li>
+				<li><a href="About.html"><span>About!</span></a></li>
+				<li><a href="Service.html"><span>Process!</span></a></li>
+				<li><a href="Gallery.html"><span>Services!</span></a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<ul>
+				<li><a href="Works.html"><span>Works!</span></a></li>
+				<li><a href="FAQ.html"><span>FAQ?</span></a></li>
+				<li><a href="Contact.html"><span>Contact!</span></a></li>
+			</ul>
+		</div>
+	</div>
+</footer>
 
 </html>
