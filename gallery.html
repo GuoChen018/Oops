@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="title" content="Oops Gallery">
+	<meta name="description" content="Portrait Photography Service ">
+	<meta name="keywords" content="Portrait, Photography, Picture, Photo">
+	<meta name="author" content="Winnie Wang, Guo Chen, Weishi Ding, Vivian Li">
 	<meta name="viewport" content="width=, initial-scale=1.0">
 	<link rel="stylesheet" href="navbar_footer_styles.css">
 	<link rel="stylesheet" type="text/css" href="gallery.css">
@@ -66,6 +70,8 @@
 	<script type="text/javascript">
 
 	$(document).ready(function () {
+		if ($(window).width()>800) {
+
 			$("#gallerytittle").mouseenter(function expand() {
 				$("#gallerytittle").animate({fontSize:"80px"},500)
 			})
@@ -73,6 +79,9 @@
 			$("#gallerytittle").mouseleave(function expand() {
 				$("#gallerytittle").animate({fontSize:"60px"},500)
 			})
+			
+		}
+			
 
 		})
 

@@ -390,6 +390,9 @@ input[type="button"] {
   transition: all 1s ease;
 }
 
+.price_tittle{
+	margin-bottom: 4%;
+}
 input[type="button"]:hover {
 	transform: scale(1.1);
 }
@@ -412,23 +415,31 @@ input[type="button"]:hover {
 
 	.service_intro{
 		margin:2% 5%;
-		margin-top: 10%;
+		margin-top: 100px ;
+		margin-bottom: 100px ;
 	}
 
 	.content{
-		font-size: 2.4vw;
-		line-height: 1.4em;
+		font-size: 20px;
+		line-height: 150%;
+	}
+
+	.content{
+		margin-top: 20px;
 	}
 	.tittle{
-		font-size: 4vw;
+		font-size: 40px;
+		width: 100%;
+		text-align: center;
 	}
 	.name{
-		font-size: 3vw;
+		font-size: 28px;
+		font-weight: 700;
 	}
 
 	.intro_content{
-		font-size: 2.5vw;
-		line-height: 1.4em;
+		font-size: 20px;
+		line-height: 150%;
 	}
 
 	.column{
@@ -437,13 +448,21 @@ input[type="button"]:hover {
 	}
 
 	h4{
-		font-size: 2.5vw;
+		font-size: 20px;
 		
 	}
+	.intro_image{
+		display:none;
+	}
+	
 
+	.service_intro{
+		display: block;
+		margin-bottom: 5%;
+	}
 	
 	.price_text{
-		font-size: 2.5vw;
+		font-size: 20px;
 		
 	}
 	
@@ -463,7 +482,7 @@ input[type="button"]:hover {
 	}
 	
 	.estimate_title{
-		font-size: 4vw;
+		font-size: 40px;
 	}
 
 	.form_label{
@@ -471,7 +490,7 @@ input[type="button"]:hover {
 	}
 
 	input[type="text"] , input[type="number"]{
-		font-size: 3.5vw;
+		font-size: 20px;
 		padding: 2% 3%;
 	}
 
@@ -485,11 +504,16 @@ input[type="button"]:hover {
 
 
 	.cta{
-        margin-top: 110%;
+        margin-top: 3%;
     }
 
 	h2{
 		font-size: 40px;
+	}
+
+	.price_estimate{
+		padding: 0%;
+		padding-bottom: 10%;
 	}
 
 }

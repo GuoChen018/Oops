@@ -159,7 +159,9 @@ input[name="btn2"] {
 	}
 
 	.contact_title{
-		font-size: 33px;
+		font-size: 40px;
+		width: 80%;
+		margin-left: 10%;
 	}
 
 	.form2{
@@ -173,11 +175,20 @@ input[name="btn2"] {
 	  outline: none;
 	  border-radius: 5px;
 	  width: 70%;
-	  font-size: 13px;
+	  font-size: 15px;
 	  
 	}
 
 	.warn{
 		font-size: 13px;
+	}
+
+	.text{
+		color: #fff;
+		font-size: 13px;
+	}
+
+	.icon{
+		height: 60%;
 	}
 }

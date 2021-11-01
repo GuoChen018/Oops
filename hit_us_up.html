@@ -2,9 +2,13 @@
 <html>
 <head>
 	<meta charset="uft-8">
-	<meta name="viewport"
-		  content="width=device_width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="title" content="Oops contact page">
+	<meta name="description" content="Portrait Photography Service ">
+	<meta name="keywords" content="Portrait, Photography, Picture, Photo">
+	<meta name="author" content="Winnie Wang, Guo Chen, Weishi Ding, Vivian Li">
+
 	<title>Hit us up</title>
 	<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
@@ -60,6 +64,55 @@
 
 
 	<script type="text/javascript">
+
+	$(document).ready(function () {
+			$(".warn").hide();
+
+			if ($(window).width()<800) {
+
+				$(document).ready(function(){
+					$("#Hit").mouseenter(function expand() {
+					$("#Hit").animate({fontSize:"45px"},500)
+					})
+
+					$("#Hit").mouseleave(function expand() {
+						$("#Hit").animate({fontSize:"40px"},500)
+					})
+
+					$("#touch").hover(function expand() {
+						$("#touch").animate({fontSize:"45px"},500)
+						
+					})
+
+					$("#touch").mouseleave(function expand() {
+						$("#touch").animate({fontSize:"40px"},500)
+					})
+				})
+					
+			} else {
+
+				$(document).ready(function(){
+					$("#Hit").mouseenter(function expand() {
+					$("#Hit").animate({fontSize:"70px"},500)
+					})
+
+					$("#Hit").mouseleave(function expand() {
+						$("#Hit").animate({fontSize:"50px"},500)
+					})
+
+					$("#touch").hover(function expand() {
+						$("#touch").animate({fontSize:"70px"},500)
+						
+					})
+
+					$("#touch").mouseleave(function expand() {
+						$("#touch").animate({fontSize:"50px"},500)
+					})
+				})
+			}
+			
+		})
+
 		function validate() {
 			phone_num = document.getElementById("phone1").value;
 			valid_num = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
@@ -88,28 +141,6 @@
 			return false;
 		}
 
-		$(document).ready(function () {
-			$(".warn").hide();
-
-			$("#Hit").mouseenter(function expand() {
-				$("#Hit").animate({fontSize:"70px"},500)
-			})
-
-			$("#Hit").mouseleave(function expand() {
-				$("#Hit").animate({fontSize:"50px"},500)
-			})
-
-			$("#touch").hover(function expand() {
-				$("#touch").animate({fontSize:"70px"},500)
-				
-			})
-
-			$("#touch").mouseleave(function expand() {
-				$("#touch").animate({fontSize:"50px"},500)
-			})
-		})
-
-		
 
 	</script>
 
