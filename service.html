@@ -6,6 +6,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="service.css">
 	<link rel="stylesheet" href="navbar_footer_styles.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,15 +14,44 @@
 </head>
 
 <style type="text/css">
+	.fa:hover {opacity: 0.7;}
+	.fa-facebook {background: #3B5998;color: white;}
+	.fa-instagram {background: #125688;color: white;}
+</style>
+
+<style type="text/css">
 *{
 	font-family: "Epilogue", sans-serif;
 }
+
+.fa:hover {opacity: 0.7;}
+.fa-facebook {background: #3B5998;color: white;}
+.fa-instagram {background: #125688;color: white;}
 
 .footer-icons{
 	width: 30%;
 	text-align: left;
 }
 
+h4{
+	text-align: left;
+}
+
+@media (max-width: 800px){
+	.footer-icons{
+	display: block;
+	position: relative;
+	width: 70%;
+	margin-left: 15%;
+	margin-right:15%;
+	text-align: center;
+	margin-top: 3%;
+	}
+
+	h4{
+		text-align: center;
+	}
+}
 </style>
 
 <script type="text/javascript">
@@ -449,7 +479,7 @@
 
 		<div class="footer-icons">
 			<h2>Oops!</h2>
-			<h4 style="text-align: left;">Your Professional portrait photographers <br> At your fingertips</h4>
+			<h4>Your Professional portrait photographers <br> At your fingertips</h4>
 			<br>
 			<div class="social-links">
 				<a href="#"><i class="fab fa-facebook-f"></i></a>

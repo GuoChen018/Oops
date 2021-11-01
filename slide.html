@@ -11,21 +11,46 @@
 	<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
 	<script type="text/javascript">
-		$(document).ready(function(){
-			$("span").mouseenter(function(){
-				$("#portrait").animate({fontSize: "100px"},1000)
-				$("#only").animate({fontSize: "70px"},400)
-				$("#portrait").css("font-weight","900")
-				$("#only").css("color","#fff");
-				$("#oops").animate({fontSize:"40px"},500);
-				$("#oops").css("font-weight","900")
-			});
+	$(document).ready(function(){
 
-			$("span").mouseleave(function(){
-				$("#portrait").css("color","#fff");
-			});
+		if($(window).width() < 800){
+			$(document).ready(function(){
+					$("span").mouseenter(function(){
+						$("#portrait").animate({fontSize: "75px"},1000)
+						$("#only").animate({fontSize: "55px"},400)
+						$("#portrait").css("font-weight","900")
+						$("#only").css("color","#fff");
+						$("#oops").animate({fontSize:"25px"},500);
+						$("#oops").css("font-weight","900")
+					});
+
+					$("span").mouseleave(function(){
+						$("#portrait").css("color","#fff");
+					});
+				
+				});
+		} else{
+
+			$(document).ready(function(){
+					$("span").mouseenter(function(){
+						$("#portrait").animate({fontSize: "100px"},1000)
+						$("#only").animate({fontSize: "70px"},400)
+						$("#portrait").css("font-weight","900")
+						$("#only").css("color","#fff");
+						$("#oops").animate({fontSize:"40px"},500);
+						$("#oops").css("font-weight","900")
+					});
+
+					$("span").mouseleave(function(){
+						$("#portrait").css("color","#fff");
+					});
+				
+				});
+		}
 		
-		});
+
+	});
+		
 	</script>
 </head>
 
@@ -37,13 +62,24 @@
 	header{
 		display: block;
 		position: relative;
-		width: 103%;
+		width: 102.5%;
+		background-color:#6634a5;
+		z-index: 3;
+		/* border:none; */
 	}
 	
 	img{
 		width: 100%;
 	}
 
+	.item{
+		color:#fff;
+		font-weight: 300;
+	}
+
+	.logo{
+		color:#fff;
+	}
 	#slides {
 			display: block;
 			position: relative;
@@ -111,7 +147,7 @@
 		display: none;
 	}
 
-	@media screen and (max-width: 800px){
+	@media screen and (max-width: 900px){
 		
 		.slide_phone{
 			display: block;
@@ -347,5 +383,7 @@
 
 <body>	
 </body>
+
+
 
 </html>
