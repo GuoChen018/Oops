@@ -7,7 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-	<link rel="stylesheet" href="navbar_footer_styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +29,14 @@
         margin: 0 auto;
         padding: 10px 40px; 
         width: 100%;
+    }
+
+    .headSpecial {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px 40px; 
+        width: 100%;
+        margin-top: 160px;
     }
 
     .column {
@@ -192,6 +199,7 @@
         margin-top: 40px;
     }
 
+
     @media (max-width: 700px) {
         .timeline::after {
             left: 31px;
@@ -200,6 +208,7 @@
         .head p {
             width: 80%;
         }
+
         .container {
             width: 100%;
             padding-left: 70px;
@@ -235,6 +244,32 @@
             width: 100%;
             padding-right: 0;
             padding-bottom: 40px;
+        }
+
+        .headSpecial {
+            margin-top: 80px;
+        }
+        
+    }
+
+
+    @media (max-width: 800px){
+        .footer-icons{
+            display: block;
+            position: relative;
+            width: 70%;
+            margin-left: 15%;
+            margin-right:15%;
+            text-align: center;
+            margin-top: 3%;
+        }
+
+        .footerHead{
+            text-align: center;
+        }
+
+        .headSpecial {
+            margin-top: 80px;
         }
     }
     
@@ -276,7 +311,7 @@
   </header>
 
 <body>
-    <div class="head">
+    <div class="headSpecial">
         <h2>A bit about us</h2>
         <p class="body2">
             Oops! was created by accident, as the name suggest. <br><br>
@@ -427,40 +462,36 @@
         <h2 class="ctaHeader"><span style="color:#FDDF56">Oops! </span> I will like a portrait!</h2>
         <a href="" class="hero-btn">Let's make it happen!</a>
     </div>
-    <div class = "flex-wrapper">
-        <div class="content"></div>
+    <footer class="footer">
+        <div class="row">
     
-                <footer class="footer">
-                    <div class="row">
+            <div class="footer-icons">
+                <h2>Oops!</h2>
+                <h4 class="footerHead">Your Professional portrait photographers <br> At your fingertips</h4>
+                <br>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
     
-                        <div class="footer-icons">
-                            <h2 >Oops!</h2>
-                            <h4 style="background-color: #6622CC;">Your Professional portrait photographers <br> At your fingertips</h4>
-                            <br>
-                            <div class="social-links">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                            </div>
-                        </div>
+            <div class="footer-col">
+                <ul>
+                    <li><a href="slide.html"><span>Home!</span></a></li>
+                    <li><a href="about.html"><span>About!</span></a></li>
+                    <li><a href="process.html"><span>Process!</span></a></li>
+                    <li><a href="service.html"><span>Services!</span></a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <ul>
+                    <li><a href="gallery.html"><span>Works!</span></a></li>
+                    <li><a href="FAQ.html"><span>FAQ?</span></a></li>
+                    <li><a href="hit_us_up.html"><span>Contact!</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     
-                        <div class="footer-col">
-                            <ul>
-                                <li><a href="slide.html"><span>Home!</span></a></li>
-                                <li><a href="about.html"><span>About!</span></a></li>
-                                <li><a href="process.html"><span>Process!</span></a></li>
-                                <li><a href="service.html"><span>Services!</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <ul>
-                                <li><a href="gallery.html"><span>Works!</span></a></li>
-                                <li><a href="FAQ.html"><span>FAQ?</span></a></li>
-                                <li><a href="hit_us_up.html"><span>Contact!</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </footer>
-    
-    </div>
 </body>
 </html>
