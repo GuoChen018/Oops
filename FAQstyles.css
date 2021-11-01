@@ -156,8 +156,18 @@ input[type="text"] {
 .fa-instagram {background: #125688;color: white;}
        
 header{
-  background-color: #fddf56;
-  border-bottom: #6622CC 4px solid;
+
+  background-color: #6622cc;
+  border-bottom: #41315b 4px solid;
+}
+
+.item {
+  color: #fff;
+  font-weight: 300;
+}
+
+ul {
+  margin-top: 2%;
 }
 
 ul li {
@@ -194,7 +204,7 @@ a{
 .logo{
   font-size: 36px;
   font-weight: 800;
-  color:#6622CC;
+  
 }
 html, body {
   height: 100%;
@@ -209,6 +219,7 @@ html, body {
     }
   header .logo {      
     width: 100px;
+    color:#fff;
   }
   
   /* .menu {
