@@ -1,11 +1,6 @@
-/*---------------Global Styles------------------*/
 
-/*---------------header------------------*/
-
-/* desktop version navbar */
 
 *{
-  /* border:red 1px solid; */
   margin:0;
 }
 
@@ -20,11 +15,32 @@ body{
 .fa-facebook {background: #3B5998;color: white;}
 .fa-instagram {background: #125688;color: white;}
        
-header{
+/* header{
   background-color: #fddf56;
   border-bottom: #6622CC 4px solid;
+} */
+
+header{
+  display: block;
+  position: relative;
+  width: 102.5%;
+  background-color:#6622CC;
+  z-index: 3;
+  border-bottom:#41315B 4px solid;
 }
 
+.item{
+  color:#fff;
+  font-weight: 300;
+}
+
+.logo{
+  color:#fff;
+}
+
+ul{
+  margin-top: 2%;
+}
 ul li {
   background-color:inherit;
 }
@@ -59,7 +75,7 @@ a{
 .logo{
   font-size: 36px;
   font-weight: 800;
-  color:#6622CC;
+  /* color:#6622CC; */
 }
 html, body {
   height: 100%;
