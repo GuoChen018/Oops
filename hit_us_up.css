@@ -15,7 +15,6 @@ a{
 	color:#000;
 }
 
-
 html{
 	font-family: "Epilogue", sans-serif;
 	/* previous font-family: 'Roboto', sans-serif;*/
@@ -32,15 +31,26 @@ section{
 	justify-content: center;
 }
 
-
+.icon{
+	height: 80%;
+}
 .container{
 	width: 100%;
 	max-width: 110rem; /*previous: 80rem*/
 	margin: 0 auto;
 	padding: 0 1.5rem;
 }
-
-
+.grid_elem{
+	display: block;
+	position: relative;
+	padding: 2%;
+}
+.text{
+	display: block;
+	position:absolute;
+	bottom: 10%;
+	color: #fff;
+}
 input[type="text"] {
     border: 2px solid #fff;
   padding: 10px 5px;
@@ -119,10 +129,10 @@ input[name="btn2"] {
     color: #000;
 	font-weight: 600;
     font-size: 18px;
-    /* background-color: #6622CC; */
+    background-color: #6622CC;
     padding: 7%;
     border-radius: 5px;
-	border: 10px solid #6622CC ;
+	/* border: 10px solid #6622CC ; */
 }
 
 .warn{
@@ -133,7 +143,7 @@ input[name="btn2"] {
 	right:18%;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
 	.grid{
 		display: grid;
 		grid-template-columns:repeat(1,1fr);
@@ -145,7 +155,7 @@ input[name="btn2"] {
 	}
 	
 	.grid_elem{
-		padding:2% 5%
+		padding:5% 5%
 	}
 
 	.contact_title{
