@@ -117,28 +117,47 @@
 			phone_num = document.getElementById("phone1").value;
 			valid_num = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
+			t_or_f = true;
 			with(document.hit_form) {
 				if (name.value == "") {
 					// alert("Please enter your name");
 					$("#namewarn").show();
-					$("#name1").css("border", "#cc0000 2px solid")
+					$("#name1").css("border", "#cc0000 2px solid");
 					name.focus();
+					t_or_f = false;
+				} else {
+					$("#namewarn").hide();
+					$("#name1").css("border", "#fff 2px solid");
 				}
+
 				if (email.value == "") {
 					// alert("Please enter your email");
 					$("#emailwarn").show();
-					$("#email1").css("border", "#cc0000 2px solid")
+					$("#email1").css("border", "#cc0000 2px solid");
 					email.focus();
+					t_or_f = false;
+				} else {
+					$("#emailwarn").hide();
+					$("#email1").css("border", "#fff 2px solid");
 				}
 		 		if (!phone_num.match(valid_num)) {
 		 			// alert("Please enter a valid phone number");
 					$("#phonewarn").show();
-					$("#phone1").css("border", "#cc0000 2px solid")
+					$("#phone1").css("border", "#cc0000 2px solid");
 		 			phone.focus();
-		 		
+		 			t_or_f = false;
+		 		} else {
+		 			$("#phonewarn").hide();
+		 			$("#phone1").css("border", "#fff 2px solid");
 		 		}
 			}
+
+			if (t_or_f == true) {
+				document.getElementById("display_text").innerHTML = "Thanks for getting in touch!";
+			}
+				
 			return false;
+				
 		}
 
 
