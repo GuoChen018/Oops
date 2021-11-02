@@ -120,7 +120,6 @@
 			t_or_f = true;
 			with(document.hit_form) {
 				if (name.value == "") {
-					// alert("Please enter your name");
 					$("#namewarn").show();
 					$("#name1").css("border", "#cc0000 2px solid");
 					name.focus();
@@ -131,7 +130,6 @@
 				}
 
 				if (email.value == "") {
-					// alert("Please enter your email");
 					$("#emailwarn").show();
 					$("#email1").css("border", "#cc0000 2px solid");
 					email.focus();
@@ -141,7 +139,6 @@
 					$("#email1").css("border", "#fff 2px solid");
 				}
 		 		if (!phone_num.match(valid_num)) {
-		 			// alert("Please enter a valid phone number");
 					$("#phonewarn").show();
 					$("#phone1").css("border", "#cc0000 2px solid");
 		 			phone.focus();
