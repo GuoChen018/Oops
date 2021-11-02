@@ -147,10 +147,14 @@
 		 			$("#phonewarn").hide();
 		 			$("#phone1").css("border", "#fff 2px solid");
 		 		}
-			}
-
-			if (t_or_f == true) {
-				document.getElementById("display_text").innerHTML = "Thanks for getting in touch!";
+				
+				if (t_or_f == true) {
+					document.getElementById("display_text").innerHTML = "Thanks for getting in touch!";
+					email.value = "";
+					name.value = "";
+					phone.value = "";
+				
+				}
 			}
 				
 			return false;
