@@ -74,7 +74,7 @@ input[type="text"] {
 	margin-top: 5%;
 }
 
-#display_text {
+.display {
 	margin: 50px 35rem 10px 40px;
 	color: #fff;
 	float: right;
