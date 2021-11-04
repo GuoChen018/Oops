@@ -16,48 +16,6 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 
-	<script type="text/javascript">
-	$(document).ready(function(){
-
-		if($(window).width() < 800){
-			$(document).ready(function(){
-					$("span").mouseenter(function(){
-						$("#portrait").animate({fontSize: "70px"},1000)
-						$("#only").animate({fontSize: "45px"},400)
-						$("#portrait").css("font-weight","900")
-						$("#only").css("color","#fff");
-						$("#oops").animate({fontSize:"25px"},500);
-						$("#oops").css("font-weight","900")
-					});
-
-					$("span").mouseleave(function(){
-						$("#portrait").css("color","#fff");
-					});
-				
-				});
-		} else{
-
-			$(document).ready(function(){
-					$("span").mouseenter(function(){
-						$("#portrait").animate({fontSize: "100px"},1000)
-						$("#only").animate({fontSize: "70px"},400)
-						$("#portrait").css("font-weight","900")
-						$("#only").css("color","#fff");
-						$("#oops").animate({fontSize:"40px"},500);
-						$("#oops").css("font-weight","900")
-					});
-
-					$("span").mouseleave(function(){
-						$("#portrait").css("color","#fff");
-					});
-				
-				});
-		}
-		
-
-	});
-		
-	</script>
 </head>
 
 <style type="text/css">
@@ -146,17 +104,17 @@
 		  width: 40%;
 	}
 
-	#slides_phone{
+	/* #slides_phone{
 		display: none;
 	}
 
 	.slide_phone{
 		display: none;
-	}
+	} */
 
 	
 
-	@media screen and (max-width: 900px){
+	@media screen and (max-width: 800px){
 		
 		.slide_phone{
 			display: block;
@@ -167,13 +125,13 @@
 			width: 110%;
 		}
 
-		#slides{
+		/* #slides{
 			display: none;
 		}
 
 		.slide{
 			display:none;
-		}
+		} */
 
 		header{
 			width:100%;
@@ -253,8 +211,17 @@
 	header{
 		z-index: 3;
 	}
+
+	footer{
+		display: block;
+		position: absolute;
+		top: 120%;
+		width: 101%;
+		z-index: 5;
+	}
 	
 </style>
+
 
 <header>
     <script>
@@ -344,25 +311,37 @@
 	</div>
 
 
-	<script type="text/javascript">
+	
+	
+</div>
+<!-- js for slideshow -->
+<script type="text/javascript">
 
-	var x = window.matchMedia("(max-width: 700px)");
+	var x = window.matchMedia("(max-width: 800px)");
 
 	window.onload = slideshow_1(x);
-
-	function slideshow_1(x){
 	
+	function slideshow_1(x){
 		if (x.matches) {
+			$('.slide').hide();
+			$('#slides').hide();
+			$('.slide_phone').show();
+			$('#slides_phone').show();
 			var slides = document.querySelectorAll('#slides_phone .slide_phone');
 			var currentSlide = 0;
 			var currentColor = 0;
 			var slideInterval = setInterval(nextSlidePhone,4000);
 			function nextSlidePhone(){
-			 	slides[currentSlide].className = 'slide_phone';
-			 	currentSlide = (currentSlide+1)%slides.length;
-			 	slides[currentSlide].className = 'slide_phone_showing';
+				 slides[currentSlide].className = 'slide_phone';
+				 currentSlide = (currentSlide+1)%slides.length;
+				 slides[currentSlide].className = 'slide_phone_showing';
 			}
 		} else {
+			$('.slide_phone').hide();
+			$('#slides_phone').hide();
+			$('.slide').show();
+			$('#slides').show();
+			
 			var slides = document.querySelectorAll('#slides .slide');
 			var currentSlide = 0;
 			var currentColor = 0;
@@ -373,11 +352,141 @@
 				currentSlide = (currentSlide+1)%slides.length;
 				slides[currentSlide].className = 'slide showing';
 			}
-			
 		}
 	}
-	</script>
-	
-</div>
 
+	$(document).ready(function(){
+		$(window).resize(function(){
+			var x = window.matchMedia("(max-width: 800px)");
+			if (x.matches) {
+				$('.slide').hide();
+				$('#slides').hide();
+				$('.slide_phone').show();
+				$('#slides_phone').show();
+				var slides = document.querySelectorAll('#slides_phone .slide_phone');
+				var currentSlide = 0;
+				var currentColor = 0;
+				var slideInterval = setInterval(nextSlidePhone,4000);
+				function nextSlidePhone(){
+					slides[currentSlide].className = 'slide_phone';
+					currentSlide = (currentSlide+1)%slides.length;
+					slides[currentSlide].className = 'slide_phone_showing';
+				}
+			} else {
+				$('.slide_phone').hide();
+				$('#slides_phone').hide();
+				$('.slide').show();
+				$('#slides').show();
+				
+				var slides = document.querySelectorAll('#slides .slide');
+				var currentSlide = 0;
+				var currentColor = 0;
+				var slideInterval = setInterval(nextSlide,4000);
+				
+				function nextSlide() {
+					slides[currentSlide].className = 'slide';
+					currentSlide = (currentSlide+1)%slides.length;
+					slides[currentSlide].className = 'slide showing';
+				}	
+			}
+		});
+	});
+</script>
+
+
+<!-- js for text animation -->
+<script type="text/javascript">
+
+$(document).ready(function(){
+		$(window).resize(function(){
+			var x = window.matchMedia("(max-width: 800px)");
+			if (x.matches) {
+				$("#portrait").animate({fontSize: "7vw"},100);
+				$("#oops").animate({fontSize:"3vw"},100);
+				$("#only").animate({fontSize: "7vw"},100);
+
+			} else{
+
+				$("#portrait").animate({fontSize: "65px"},100);
+				$("#only").animate({fontSize: "65px"},100);
+				$("#oops").animate({fontSize:"24px"},100);
+
+			}
+		})
+	})
+	
+	$(document).ready(function(){
+
+		if($(window).width() < 800){
+			$(document).ready(function(){
+					$("span").mouseenter(function(){
+						$("#portrait").animate({fontSize: "10vw"},1000)
+						$("#only").animate({fontSize: "7.5vw"},400)
+						$("#portrait").css("font-weight","900")
+						$("#only").css("color","#fff");
+						$("#oops").animate({fontSize:"3.5vw"},500);
+						$("#oops").css("font-weight","900")
+					});
+
+					$("span").mouseleave(function(){
+						$("#portrait").css("color","#fff");
+					});
+				
+				});
+		} else{
+
+			$(document).ready(function(){
+					$("span").mouseenter(function(){
+						$("#portrait").animate({fontSize: "100px"},1000)
+						$("#only").animate({fontSize: "70px"},400)
+						$("#portrait").css("font-weight","900")
+						$("#only").css("color","#fff");
+						$("#oops").animate({fontSize:"40px"},500);
+						$("#oops").css("font-weight","900")
+					});
+
+					$("span").mouseleave(function(){
+						$("#portrait").css("color","#fff");
+					});
+				
+				});
+		}
+	});		
+
+
+
+</script>
+
+
+
+<!-- <footer class="footer">
+	<div class="row">
+
+		<div class="footer-icons">
+			<h2 >Oops!</h2>
+			<h4 style="background-color: #6622CC;">Your Professional portrait photographers <br> At your fingertips</h4>
+			<br>
+			<div class="social-links">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+
+		<div class="footer-col">
+			<ul>
+				<li><a href="slide.html"><span>Home!</span></a></li>
+				<li><a href="about.html"><span>About!</span></a></li>
+				<li><a href="process.html"><span>Process!</span></a></li>
+				<li><a href="service.html"><span>Services!</span></a></li>
+			</ul>
+		</div>
+		<div class="footer-col">
+			<ul>
+				<li><a href="gallery.html"><span>Works!</span></a></li>
+				<li><a href="FAQ.html"><span>FAQ?</span></a></li>
+				<li><a href="hit_us_up.html"><span>Contact!</span></a></li>
+			</ul>
+		</div>
+	</div>
+</footer> -->
 </html>
